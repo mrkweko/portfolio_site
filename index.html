@@ -8,11 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -30,6 +26,9 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
+    <div>
+      <img src="images/frof.jpeg" alt="Hero Image" class="silhu"/>
+    </div>
     <div class="hero-content">
       <h2>Hi, I'm Daniel</h2>
       <p>Aspiring Computer Scientist & Innovator</p>
@@ -49,17 +48,18 @@
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card">
-        <img src="images/project1.png" alt="Project 1">
-        <h3>Arduino Smart Farm</h3>
-        <p>Automated irrigation system using Arduino & sensors.</p>
-        <a href="#">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <img src="images/project2.png" alt="Project 2">
+      <div class="project-card" class="scroll-reveal-element" data-direction="left">
+        <img src="images/icons8-project-management-48.png" alt="Project 1">
         <h3>Portfolio Website</h3>
         <p>A responsive website built with HTML, CSS, and JS.</p>
-        <a href="#">Live Demo</a>
+        <a href="#" class="project-links">Live Demo</a>
+      </div>
+
+      <div class="project-card" class="scroll-reveal-element" data-direction="right">
+        <img src="images/icons8-office-40.png" alt="Project 2">
+        <h3>Soon Coming</h3>
+        <p>Stick around for it!</p>
+        <a href="#" class="project-links">View on GitHub</a>
       </div>
     </div>
   </section>
@@ -89,6 +89,5 @@
     <p>&copy; 2025 Daniel K. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
