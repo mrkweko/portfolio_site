@@ -1,3 +1,20 @@
+// Mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+mobileMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  });
+});
+
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
@@ -7,22 +24,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-
 // Scroll reveal animation
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.scroll-reveal-element');
 
   const observerOptions = {
-    root: null, // relative to the viewport
+    root: null,
     rootMargin: '0px',
-    threshold: 0.2 // Trigger when 20% of the element is visible
+    threshold: 0.2
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Stop observing once visible
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
@@ -31,4 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(element);
   });
 });
-

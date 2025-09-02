@@ -7,15 +7,21 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <!-- ===== HEADER ===== -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar container">
       <h1 class="logo">DANIEL KWEKO</h1>
-      <ul class="nav-links">
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#skills">SKILLS</a></li>
@@ -26,68 +32,126 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div>
-      <img src="images/frof.jpeg" alt="Hero Image" class="silhu"/>
-    </div>
-    <div class="hero-content">
-      <h2>Hi, I'm Daniel</h2>
-      <p>Aspiring Computer Scientist & Innovator</p>
-      <a href="#projects" class="btn">View My Work</a>
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h2>Hi, I'm Daniel</h2>
+        <p>Aspiring Computer Scientist & Innovator</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+      <div class="silhu-container">
+        <img src="images/frof.jpeg" alt="Daniel Kweko" class="silhu"/>
+      </div>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I am an aspiring computer scientist and tech enthusiast, passionate about innovation and development, with a strong focus on collaboration and team building.
-    </p>
+    <div class="container">
+      <h2 class="section-title text-center">About Me</h2>
+      <div class="about-content">
+        <p>
+          Fugiat in non do ex deserunt ullamco exercitation officia tempor irure laboris sunt. In proident labore aliquip ipsum nostrud eiusmod fugiat ea enim aliquip deserunt irure. Amet sint minim veniam ea ex ex tempor ex ut. Cillum nostrud deserunt cillum sint magna adipisicing. Labore ut ut irure qui dolore culpa adipisicing irure adipisicing consectetur ex commodo. 
+        </p>
+        <p>
+          Amet nostrud nisi consequat dolor sunt consequat qui proident esse tempor est anim amet consectetur. Amet minim occaecat ad quis magna. Exercitation et aute irure in officia ad consectetur aliquip eiusmod dolore deserunt non.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card" class="scroll-reveal-element" data-direction="left">
-        <img src="images/icons8-project-management-48.png" alt="Project 1">
-        <h3>Portfolio Website</h3>
-        <p>A responsive website built with HTML, CSS, and JS.</p>
-        <a href="#" class="project-links">Live Demo</a>
-      </div>
+    <div class="container">
+      <h2 class="section-title text-center">Projects</h2>
+      <div class="project-grid">
+        <div class="project-card scroll-reveal-element" data-direction="left">
+          <div class="project-info">
+            <img src="images/icons8-project-management-48.png" alt="Project Management" class="project-icon">
+            <h3>Portfolio Website</h3>
+            <p>A responsive website built with HTML, CSS, and JavaScript to showcase my work and skills as a developer.</p>
+            <div class="project-links-container">
+              <a href="#" class="project-links">Live Demo</a>
+              <a href="#" class="project-links">View on GitHub</a>
+            </div>
+          </div>
+        </div>
 
-      <div class="project-card" class="scroll-reveal-element" data-direction="right">
-        <img src="images/icons8-office-40.png" alt="Project 2">
-        <h3>Soon Coming</h3>
-        <p>Stick around for it!</p>
-        <a href="#" class="project-links">View on GitHub</a>
+        <div class="project-card scroll-reveal-element" data-direction="right">
+          <div class="project-info">
+            <img src="images/icons8-office-40.png" alt="Office" class="project-icon">
+            <h3>Coming Soon</h3>
+            <p>I'm working on some exciting projects that will be displayed here soon. Stay tuned for updates!</p>
+            <a href="#" class="project-links">Learn More</a>
+          </div>
+        </div>
+
+        <div class="project-card scroll-reveal-element" data-direction="left">
+          <div class="project-info">
+            <img src="images/icons8-python-48.png" alt="Code" class="project-icon">
+            <h3>Python/Django</h3>
+            <p>Coming Soon</p>
+            <a href="#" class="project-links">View on GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML / CSS</li>
-      <li>Python</li>
-      <li>Problem Solving</li>
-    </ul>
+    <div class="container">
+      <h2 class="section-title text-center">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category scroll-reveal-element">
+          <h3>Frontend</h3>
+          <ul class="skill-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category scroll-reveal-element">
+          <h3>Backend</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Problem Solving</li>
+            <li></li>
+          </ul>
+        </div>
+        
+        <div class="skill-category scroll-reveal-element">
+          <h3>Soft Skills</h3>
+          <ul class="skill-list">
+            <li>Team Collaboration</li>
+            <li>Communication</li>
+            <li>Project Management</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="contact">
-    <h2>Let's Connect</h2>
-    <ul class="socials">
-      <li><a href="#"><img src="images/icons8-linkedin-50.png" alt="LinkedIn" /></a></li>
-      <li><a href="#"><img src="images/icons8-instagram-50.png" alt="Instagram" /></a></li>
-      <li><a href="#"><img src="images/icons8-github-logo-64.png" alt="GitHub" style="width: 50px;height: 50px;" /></a></li>
-    </ul>
+    <div class="container">
+      <h2 class="section-title text-center">Let's Connect</h2>
+      <p class="text-center">Feel free to reach out for collaborations or just a friendly hello</p>
+      <ul class="socials">
+        <li><a href="#"><img src="images/icons8-linkedin-50.png" alt="LinkedIn" /></a></li>
+        <li><a href="#"><img src="images/icons8-instagram-50.png" alt="Instagram" /></a></li>
+        <li><a href="#"><img src="images/icons8-github-logo-64.png" alt="GitHub" /></a></li>
+      </ul>
+    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2025 Daniel K. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Daniel Kweko. All rights reserved.</p>
+    </div>
   </footer>
-
 </body>
 </html>
